@@ -20,14 +20,14 @@ final class NewsViewModel: ObservableObject {
     
     // MARK: - Network Call
     func fetchData() {
-        let url = "https://api.worldnewsapi.com/search-news?api-key=756a0d88a49143989896b1497489a023&text=tesla."
+        let url = "https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=RPh7SsqhZzUkxgOoEHLNMaA2hk1XcAnP"
         
         NetworkService.shared.getData(urlString: url) { [weak self] (result: Result<NewsData, Error>) in
             guard let self else { return }
             
             switch result {
             case .success(let data):
-                self.news = data.news
+                self.news = data.results
             case .failure(let error):
                 print(error)
             }

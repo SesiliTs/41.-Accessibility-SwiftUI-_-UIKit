@@ -20,9 +20,6 @@ struct CollectionView: UIViewRepresentable {
         collectionView.delegate = context.coordinator
         collectionView.dataSource = context.coordinator
         collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-
-        // Additional configuration for your UICollectionView
-        
         return collectionView
     }
     
@@ -30,7 +27,7 @@ struct CollectionView: UIViewRepresentable {
         uiView.reloadData()
     }
     
-    class Coordinator: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
+    class Coordinator: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
         var parent: CollectionView
         
         init(parent: CollectionView) {
@@ -47,15 +44,19 @@ struct CollectionView: UIViewRepresentable {
             cell.configure(with: currentCell)
             return cell
         }
+        
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            let spacing: CGFloat = 15
+            let collectionViewWidth = collectionView.frame.width
+            let collectionViewHeight = collectionView.frame.height
+            let itemWidth = (collectionViewWidth - spacing) / 2
+            return CGSize(width: itemWidth, height: collectionViewHeight/2.5)
+        }
     }
 }
 
 #Preview {
-    CollectionView(newsForCell: .constant([
-        News(id: 1, title: "title", text: "some text", url: "https://www.reuters.com/investigates/special-report/tesla-insurance/", image: "https://www.reuters.com/investigates/special-report/assets/tesla-insurance/mastheads/tesla-insurance-share.jpg?v=313810211123", publishDate: "2023-11-21 15:03:40", author: "STEVE STECKLOW", authors: [
-            "STEVE STECKLOW"
-        ], language: "en", sourceCountry: "gb", sentiment: -0.63),
-        News(id: 2, title: "second Title", text: "some text", url: "https://www.reuters.com/investigates/special-report/tesla-insurance/", image: "https://www.reuters.com/investigates/special-report/assets/tesla-insurance/mastheads/tesla-insurance-share.jpg?v=313810211123", publishDate: "2023-11-21 15:03:40", author: "STEVE STECKLOW", authors: [
-            "STEVE STECKLOW"
-        ], language: "en", sourceCountry: "gb", sentiment: -0.63)]))
+    CollectionView(newsForCell: .constant([News(url: "https://www.nytimes.com/2023/12/27/arts/the-crown-best-worst.html", id: 100000009237739, source: "New York Times", publishedDate: "2023-12-27", section: "Arts", byline: "By Sarah Lyall", type: "Article", title: "The Best and Worst (and Dumbest) From 6 Seasons of ‘The Crown’", media: [Media(mediaMetadata: [MediaMetadatum(url: "https://static01.nyt.com/images/2023/12/27/multimedia/27crown-awards-wclv/27crown-awards-wclv-thumbStandard.jpg")])]),
+                                           News(url: "https://www.nytimes.com/2023/12/27/arts/the-crown-best-worst.html", id: 100000009237739, source: "New York Times", publishedDate: "2023-12-27", section: "Arts", byline: "By Sarah Lyall", type: "Article", title: "The Best and Worst (and Dumbest) From 6 Seasons of ‘The Crown’", media: [Media(mediaMetadata: [MediaMetadatum(url: "https://static01.nyt.com/images/2023/12/27/multimedia/27crown-awards-wclv/27crown-awards-wclv-thumbStandard.jpg")])])
+                                          ]))
 }

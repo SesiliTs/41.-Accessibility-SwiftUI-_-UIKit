@@ -15,16 +15,31 @@ class CollectionViewCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.layer.cornerRadius = 10
         imageView.clipsToBounds = true
         imageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
-        imageView.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: 200).isActive = true
         return imageView
     }()
     
     private var newsTitle = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 16, weight: .bold)
-        label.text = label.text?.uppercased()
+        label.numberOfLines = 2
+        label.lineBreakMode = .byWordWrapping
+        label.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        return label
+    }()
+    
+    private var newsAuthor = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 10, weight: .light)
+        return label
+    }()
+    
+    private var newsDate = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 10, weight: .light)
         return label
     }()
     
@@ -32,8 +47,7 @@ class CollectionViewCell: UICollectionViewCell {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        stackView.spacing = 8
-        stackView.distribution = .equalCentering
+        stackView.spacing = 10
         stackView.alignment = .leading
         return stackView
     }()
@@ -45,7 +59,7 @@ class CollectionViewCell: UICollectionViewCell {
         addViews()
         stackViewConstraints()
         prepareForReuse()
-        sampleModel()
+//        sampleModel()
     }
     
     required init?(coder: NSCoder) {
@@ -56,6 +70,9 @@ class CollectionViewCell: UICollectionViewCell {
         contentView.addSubview(mainStackView)
         mainStackView.addArrangedSubview(newsImage)
         mainStackView.addArrangedSubview(newsTitle)
+        mainStackView.addArrangedSubview(newsAuthor)
+        mainStackView.setCustomSpacing(5, after: newsAuthor)
+        mainStackView.addArrangedSubview(newsDate)
         
     }
     
@@ -72,18 +89,16 @@ class CollectionViewCell: UICollectionViewCell {
         super.prepareForReuse()
         newsImage.image = nil
         newsTitle.text = nil
+        newsAuthor.text = nil
+        newsDate.text = nil
     }
     
     func configure(with model: News) {
-        newsImage.loadFrom(stringUrl: model.image)
-        newsTitle.text = model.title
-    }
-    
-    func sampleModel() {
-        newsImage.loadFrom(stringUrl: "https://www.reuters.com/investigates/special-report/assets/tesla-insurance/mastheads/tesla-insurance-share.jpg?v=313810211123")
-        newsTitle.text = "news title"
-    }
-    
+        newsImage.loadFrom(stringUrl: model.media[0].mediaMetadata[0].url)
+        newsTitle.text = model.title.uppercased()
+        newsAuthor.text = model.byline
+        newsDate.text = model.publishedDate
+    }    
 }
 
 

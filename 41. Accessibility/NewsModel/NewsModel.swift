@@ -7,28 +7,40 @@
 
 import Foundation
 
-// MARK: - ProductData
-struct NewsData: Codable {
-    let offset, number, available: Int
-    let news: [News]
+// MARK: - NewsData
+struct NewsData: Decodable {
+    let results: [News]
 }
 
 // MARK: - News
-struct News: Codable {
-    let id: Int
-    let title, text: String
+struct News: Decodable {
     let url: String
-    let image: String
-    let publishDate, author: String
-    let authors: [String]
-    let language, sourceCountry: String
-    let sentiment: Double
+    let id: Int
+    let source, publishedDate, section: String
+    let byline, type, title: String
+    let media: [Media]
 
     enum CodingKeys: String, CodingKey {
-        case id, title, text, url, image
-        case publishDate = "publish_date"
-        case author, authors, language
-        case sourceCountry = "source_country"
-        case sentiment
+        case url, id
+        case source
+        case publishedDate = "published_date"
+        case section
+        case byline, type, title
+        case media
     }
 }
+
+// MARK: - Media
+struct Media: Decodable {
+    let mediaMetadata: [MediaMetadatum]
+
+    enum CodingKeys: String, CodingKey {
+        case mediaMetadata = "media-metadata"
+    }
+}
+
+// MARK: - MediaMetadatum
+struct MediaMetadatum: Decodable {
+    let url: String
+}
+
