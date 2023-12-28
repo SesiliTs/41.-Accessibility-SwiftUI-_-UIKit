@@ -5,11 +5,11 @@
 //  Created by Sesili Tsikaridze on 27.12.23.
 //
 
-import UIKit
 import SwiftUI
 
 struct CollectionView: UIViewRepresentable {
     @Binding var newsForCell: [News]
+    var fontSize: CGFloat
     
     func makeCoordinator() -> Coordinator {
         Coordinator(parent: self)
@@ -24,11 +24,13 @@ struct CollectionView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UICollectionView, context: Context) {
+        context.coordinator.fontSize = fontSize
         uiView.reloadData()
     }
     
     class Coordinator: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
         var parent: CollectionView
+        var fontSize: CGFloat = 14
         
         init(parent: CollectionView) {
             self.parent = parent
@@ -41,7 +43,7 @@ struct CollectionView: UIViewRepresentable {
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
             let currentCell = parent.newsForCell[indexPath.row]
-            cell.configure(with: currentCell)
+            cell.configure(with: currentCell, fontSize: fontSize)
             return cell
         }
         
@@ -51,13 +53,4 @@ struct CollectionView: UIViewRepresentable {
             return CGSize(width: collectionViewWidth - 20, height: collectionViewHeight / 2.1)
         }
     }
-}
-
-#Preview {
-    CollectionView(newsForCell: .constant([
-        News(url: "https://www.nytimes.com/2023/12/27/arts/the-crown-best-worst.html", id: 100000009237739, source: "New York Times", publishedDate: "2023-12-27", section: "Arts", byline: "By Sarah Lyall", type: "Article", title: "The Best and Worst (and Dumbest) From 6 Seasons of ‘The Crown’", media: [Media(mediaMetadata: [MediaMetadatum(url: "https://static01.nyt.com/images/2023/12/27/multimedia/27crown-awards-wclv/27crown-awards-wclv-thumbStandard.jpg")])]),
-        News(url: "https://www.nytimes.com/2023/12/27/arts/the-crown-best-worst.html", id: 100000009237739, source: "New York Times", publishedDate: "2023-12-27", section: "Arts", byline: "By Sarah Lyall", type: "Article", title: "The Best and Worst (and Dumbest) From 6 Seasons of ‘The Crown’", media: [Media(mediaMetadata: [MediaMetadatum(url: "https://static01.nyt.com/images/2023/12/27/multimedia/27crown-awards-wclv/27crown-awards-wclv-thumbStandard.jpg")])]),
-                                           
-        News(url: "https://www.nytimes.com/2023/12/27/arts/the-crown-best-worst.html", id: 100000009237739, source: "New York Times", publishedDate: "2023-12-27", section: "Arts", byline: "By Sarah Lyall", type: "Article", title: "The Best and Worst (and Dumbest) From 6 Seasons of ‘The Crown’", media: [Media(mediaMetadata: [MediaMetadatum(url: "https://static01.nyt.com/images/2023/12/27/multimedia/27crown-awards-wclv/27crown-awards-wclv-thumbStandard.jpg")])])
-                                          ]))
 }

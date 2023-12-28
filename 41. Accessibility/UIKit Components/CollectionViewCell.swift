@@ -5,13 +5,12 @@
 //  Created by Sesili Tsikaridze on 27.12.23.
 //
 
-import UIKit
+import SwiftUI
 
 class CollectionViewCell: UICollectionViewCell {
     
     //MARK: - Properties
-    
-    
+        
     private var newsImage = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -56,8 +55,6 @@ class CollectionViewCell: UICollectionViewCell {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.spacing = 5
-        stackView.alignment = .top
-        stackView.distribution = .equalCentering
         return stackView
     }()
     
@@ -73,6 +70,8 @@ class CollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - Private functions
     
     private func addViews() {
         contentView.addSubview(mainStackView)
@@ -100,7 +99,7 @@ class CollectionViewCell: UICollectionViewCell {
         newsDate.text = nil
     }
     
-    func configure(with model: News) {
+    func configure(with model: News, fontSize: CGFloat) {
         newsImage.loadFrom(stringUrl: model.media[0].mediaMetadata[0].url)
         newsTitle.text = model.title.uppercased()
         newsAuthor.text = model.byline
@@ -110,6 +109,10 @@ class CollectionViewCell: UICollectionViewCell {
         newsTitle.accessibilityLabel = "News Title: \(model.title)"
         newsAuthor.accessibilityLabel = "Author: \(model.byline)"
         newsDate.accessibilityLabel = "Published Date: \(model.publishedDate)"
+        
+        newsTitle.font = .systemFont(ofSize: fontSize, weight: .bold)
+        newsAuthor.font = .systemFont(ofSize: fontSize, weight: .light)
+        newsDate.font = .systemFont(ofSize: fontSize, weight: .light)
 
     }
 }
@@ -129,5 +132,6 @@ extension UIImageView {
 }
 
 #Preview {
-    CollectionViewCell()
+    NewsView()
+        .environmentObject(NewsViewModel())
 }
