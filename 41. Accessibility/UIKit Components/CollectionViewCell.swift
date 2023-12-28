@@ -11,6 +11,7 @@ class CollectionViewCell: UICollectionViewCell {
     
     //MARK: - Properties
     
+    
     private var newsImage = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -18,28 +19,35 @@ class CollectionViewCell: UICollectionViewCell {
         imageView.layer.cornerRadius = 10
         imageView.clipsToBounds = true
         imageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
-        imageView.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: 350).isActive = true
+        imageView.isAccessibilityElement = true
+        imageView.accessibilityIdentifier = "NewsImage"
         return imageView
     }()
     
     private var newsTitle = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 16, weight: .bold)
-        label.numberOfLines = 2
+        label.font = .systemFont(ofSize: 14, weight: .bold)
         label.lineBreakMode = .byWordWrapping
-        label.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        label.numberOfLines = 0
+        label.isAccessibilityElement = true
+        label.accessibilityIdentifier = "NewsTitle"
         return label
     }()
     
     private var newsAuthor = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 10, weight: .light)
+        label.isAccessibilityElement = true
+        label.accessibilityIdentifier = "NewsAuthor"
         return label
     }()
     
     private var newsDate = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 10, weight: .light)
+        label.isAccessibilityElement = true
+        label.accessibilityIdentifier = "NewsDate"
         return label
     }()
     
@@ -47,8 +55,9 @@ class CollectionViewCell: UICollectionViewCell {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        stackView.spacing = 10
-        stackView.alignment = .leading
+        stackView.spacing = 5
+        stackView.alignment = .top
+        stackView.distribution = .equalCentering
         return stackView
     }()
     
@@ -59,7 +68,6 @@ class CollectionViewCell: UICollectionViewCell {
         addViews()
         stackViewConstraints()
         prepareForReuse()
-//        sampleModel()
     }
     
     required init?(coder: NSCoder) {
@@ -71,17 +79,16 @@ class CollectionViewCell: UICollectionViewCell {
         mainStackView.addArrangedSubview(newsImage)
         mainStackView.addArrangedSubview(newsTitle)
         mainStackView.addArrangedSubview(newsAuthor)
-        mainStackView.setCustomSpacing(5, after: newsAuthor)
         mainStackView.addArrangedSubview(newsDate)
         
     }
     
     private func stackViewConstraints() {
         NSLayoutConstraint.activate([
-            mainStackView.topAnchor.constraint(equalTo: topAnchor),
-            mainStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            mainStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            mainStackView.trailingAnchor.constraint(equalTo: trailingAnchor)
+            mainStackView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            mainStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
+            mainStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            mainStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
         ])
     }
     
@@ -98,7 +105,13 @@ class CollectionViewCell: UICollectionViewCell {
         newsTitle.text = model.title.uppercased()
         newsAuthor.text = model.byline
         newsDate.text = model.publishedDate
-    }    
+        
+        newsImage.accessibilityLabel = "News Image"
+        newsTitle.accessibilityLabel = "News Title: \(model.title)"
+        newsAuthor.accessibilityLabel = "Author: \(model.byline)"
+        newsDate.accessibilityLabel = "Published Date: \(model.publishedDate)"
+
+    }
 }
 
 

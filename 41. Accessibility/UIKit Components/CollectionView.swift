@@ -46,17 +46,18 @@ struct CollectionView: UIViewRepresentable {
         }
         
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            let spacing: CGFloat = 15
             let collectionViewWidth = collectionView.frame.width
             let collectionViewHeight = collectionView.frame.height
-            let itemWidth = (collectionViewWidth - spacing) / 2
-            return CGSize(width: itemWidth, height: collectionViewHeight/2.5)
+            return CGSize(width: collectionViewWidth - 20, height: collectionViewHeight / 2.1)
         }
     }
 }
 
 #Preview {
-    CollectionView(newsForCell: .constant([News(url: "https://www.nytimes.com/2023/12/27/arts/the-crown-best-worst.html", id: 100000009237739, source: "New York Times", publishedDate: "2023-12-27", section: "Arts", byline: "By Sarah Lyall", type: "Article", title: "The Best and Worst (and Dumbest) From 6 Seasons of ‘The Crown’", media: [Media(mediaMetadata: [MediaMetadatum(url: "https://static01.nyt.com/images/2023/12/27/multimedia/27crown-awards-wclv/27crown-awards-wclv-thumbStandard.jpg")])]),
-                                           News(url: "https://www.nytimes.com/2023/12/27/arts/the-crown-best-worst.html", id: 100000009237739, source: "New York Times", publishedDate: "2023-12-27", section: "Arts", byline: "By Sarah Lyall", type: "Article", title: "The Best and Worst (and Dumbest) From 6 Seasons of ‘The Crown’", media: [Media(mediaMetadata: [MediaMetadatum(url: "https://static01.nyt.com/images/2023/12/27/multimedia/27crown-awards-wclv/27crown-awards-wclv-thumbStandard.jpg")])])
+    CollectionView(newsForCell: .constant([
+        News(url: "https://www.nytimes.com/2023/12/27/arts/the-crown-best-worst.html", id: 100000009237739, source: "New York Times", publishedDate: "2023-12-27", section: "Arts", byline: "By Sarah Lyall", type: "Article", title: "The Best and Worst (and Dumbest) From 6 Seasons of ‘The Crown’", media: [Media(mediaMetadata: [MediaMetadatum(url: "https://static01.nyt.com/images/2023/12/27/multimedia/27crown-awards-wclv/27crown-awards-wclv-thumbStandard.jpg")])]),
+        News(url: "https://www.nytimes.com/2023/12/27/arts/the-crown-best-worst.html", id: 100000009237739, source: "New York Times", publishedDate: "2023-12-27", section: "Arts", byline: "By Sarah Lyall", type: "Article", title: "The Best and Worst (and Dumbest) From 6 Seasons of ‘The Crown’", media: [Media(mediaMetadata: [MediaMetadatum(url: "https://static01.nyt.com/images/2023/12/27/multimedia/27crown-awards-wclv/27crown-awards-wclv-thumbStandard.jpg")])]),
+                                           
+        News(url: "https://www.nytimes.com/2023/12/27/arts/the-crown-best-worst.html", id: 100000009237739, source: "New York Times", publishedDate: "2023-12-27", section: "Arts", byline: "By Sarah Lyall", type: "Article", title: "The Best and Worst (and Dumbest) From 6 Seasons of ‘The Crown’", media: [Media(mediaMetadata: [MediaMetadatum(url: "https://static01.nyt.com/images/2023/12/27/multimedia/27crown-awards-wclv/27crown-awards-wclv-thumbStandard.jpg")])])
                                           ]))
 }

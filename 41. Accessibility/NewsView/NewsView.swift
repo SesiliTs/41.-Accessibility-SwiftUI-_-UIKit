@@ -13,6 +13,13 @@ struct NewsView: View {
     
     var body: some View {
         VStack {
+            Image(.nytLogo)
+                .resizable()
+                .scaledToFit()
+                .frame(height: 120)
+                .clipped()
+                .padding(.vertical, -30)
+            
             CollectionView(newsForCell: $viewModel.news)
         }
         .padding()
