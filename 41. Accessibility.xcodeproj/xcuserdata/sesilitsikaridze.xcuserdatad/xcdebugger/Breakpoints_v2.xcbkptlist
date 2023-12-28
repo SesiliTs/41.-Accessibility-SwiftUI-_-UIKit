@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "9B152CD9-A62B-4725-BA18-89715686953E"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7526CB5C-8B1A-469F-8AFB-F34DC5B0C835"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "41. Accessibility/NewsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "fetchData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7526CB5C-8B1A-469F-8AFB-F34DC5B0C835 - 7cfa02573ffa0cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;_1__Accessibility.NewsData, Swift.Error&gt;) -&gt; () in _1__Accessibility.NewsViewModel.fetchDestinations() -&gt; ()"
+                  moduleName = "41. Accessibility"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sesilitsikaridze/Desktop/TBC%20iOS/41.%20Accessibility/41.%20Accessibility/NewsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "376">
+               </Location>
+               <Location
+                  uuid = "7526CB5C-8B1A-469F-8AFB-F34DC5B0C835 - 7cfa02573ffa0cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;_1__Accessibility.NewsData, Swift.Error&gt;) -&gt; () in _1__Accessibility.NewsViewModel.fetchDestinations() -&gt; ()"
+                  moduleName = "41. Accessibility"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sesilitsikaridze/Desktop/TBC%20iOS/41.%20Accessibility/41.%20Accessibility/NewsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "460">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "679FD35A-ED4A-40D2-92B8-97CCA63E7E98"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "41. Accessibility/NewsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "fetchData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F72A741C-AFF8-4601-AC3E-4A32656F1E28"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "41. Accessibility/NewsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "fetchData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F72A741C-AFF8-4601-AC3E-4A32656F1E28 - fea38df025c8d50a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_1__Accessibility.NewsViewModel.fetchDestinations() -&gt; ()"
+                  moduleName = "41. Accessibility"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sesilitsikaridze/Desktop/TBC%20iOS/41.%20Accessibility/41.%20Accessibility/NewsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "71">
+               </Location>
+               <Location
+                  uuid = "F72A741C-AFF8-4601-AC3E-4A32656F1E28 - 7cfa02573ffa143"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;_1__Accessibility.NewsData, Swift.Error&gt;) -&gt; () in _1__Accessibility.NewsViewModel.fetchDestinations() -&gt; ()"
+                  moduleName = "41. Accessibility"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sesilitsikaridze/Desktop/TBC%20iOS/41.%20Accessibility/41.%20Accessibility/NewsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "197">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F8FF3058-B623-429A-8245-9046F4FCC67A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "41. Accessibility/NewsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "fetchData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3E59B9F2-778B-4476-BE2E-AD3DF8635649"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "41. Accessibility/NewsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "fetchData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BE94BAEB-F0DB-43CB-952A-4A8C64D7A242"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "41. Accessibility/UIKit Components/CollectionView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BE94BAEB-F0DB-43CB-952A-4A8C64D7A242 - 3ac6d5355c046e44"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_1__Accessibility.CollectionView.Coordinator.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "41. Accessibility"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sesilitsikaridze/Desktop/TBC%20iOS/41.%20Accessibility/41.%20Accessibility/UIKit%20Components/CollectionView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "785">
+               </Location>
+               <Location
+                  uuid = "BE94BAEB-F0DB-43CB-952A-4A8C64D7A242 - 3ac6d5355c046e44"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_1__Accessibility.CollectionView.Coordinator.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "41. Accessibility"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sesilitsikaridze/Desktop/TBC%20iOS/41.%20Accessibility/41.%20Accessibility/UIKit%20Components/CollectionView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "488">
+               </Location>
+               <Location
+                  uuid = "BE94BAEB-F0DB-43CB-952A-4A8C64D7A242 - 3ac6d5355c046e25"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_1__Accessibility.CollectionView.Coordinator.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "41. Accessibility"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sesilitsikaridze/Desktop/TBC%20iOS/41.%20Accessibility/41.%20Accessibility/UIKit%20Components/CollectionView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "191">
+               </Location>
+               <Location
+                  uuid = "BE94BAEB-F0DB-43CB-952A-4A8C64D7A242 - 3ac6d5355c046e25"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_1__Accessibility.CollectionView.Coordinator.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "41. Accessibility"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sesilitsikaridze/Desktop/TBC%20iOS/41.%20Accessibility/41.%20Accessibility/UIKit%20Components/CollectionView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "488">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5864F57F-0342-4FC4-929B-422166076230"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "41. Accessibility/NewsView/NewsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "fetchData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5864F57F-0342-4FC4-929B-422166076230 - 7386520a0cca278c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;_1__Accessibility.NewsData, Swift.Error&gt;) -&gt; () in _1__Accessibility.NewsViewModel.fetchData() -&gt; ()"
+                  moduleName = "41. Accessibility"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sesilitsikaridze/Desktop/TBC%20iOS/41.%20Accessibility/41.%20Accessibility/NewsView/NewsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "837">
+               </Location>
+               <Location
+                  uuid = "5864F57F-0342-4FC4-929B-422166076230 - 7386520a0cca278c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;_1__Accessibility.NewsData, Swift.Error&gt;) -&gt; () in _1__Accessibility.NewsViewModel.fetchData() -&gt; ()"
+                  moduleName = "41. Accessibility"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sesilitsikaridze/Desktop/TBC%20iOS/41.%20Accessibility/41.%20Accessibility/NewsView/NewsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "790">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
